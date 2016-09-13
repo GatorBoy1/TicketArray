@@ -14,6 +14,12 @@ end
 
 def find_tickets_one_off(my_ticket, winning_tickets)
 	find_tickets_one_off = []
+	winning_tickets.each do |ticket|
+		if off_by_one?(my_ticket, ticket)
+			find_tickets_one_off << ticket
+		end
+	end
+	find_tickets_one_off
 end
 
-				
+			
